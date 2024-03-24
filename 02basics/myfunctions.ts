@@ -15,6 +15,14 @@ const getValue = (myVal: number): boolean | string => {
     return "200 OK";
 }
 
+const consoleError = (errmsg: string): void => {
+    console.log(errmsg);
+}
+
+const handleError = (errmsg: string): never => {
+    throw new Error(errmsg);
+}
+
 const heroes = ["thor", "spiderman", "ironman"];
 
 heroes.map(hero => {
